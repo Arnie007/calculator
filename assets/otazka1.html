@@ -1,0 +1,72 @@
+<html lang="cs"><head>
+   <html lang="cs"><head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Civilio volební kalkulačka</title>
+      <meta name="author" content="Civilio.cz">
+      <meta name="description" content="Civilio volební kalkulačka">
+      <meta name="keywords" content="kalkulačka,Civilio,volby">
+      <link rel="shortcut icon" href="./assets/logo.png" type="image/png">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/otazky.css" type="text/css">
+</head>
+<body>
+  <div class="outer">
+     <div class="content">
+        <div class="logo">
+          <img src="../assets/Civilio" alt="Civilio">
+        </a>
+           <h1>Civilio kalkulačka</h1>
+        </div>
+        <div class="card-quiz-outer">
+           <div class="card">
+              <div class="card-content">
+                 <h1 class="card-header">
+                   1. Ekonomickou krizí se musíme proinvestovat.   </h1>
+                       <p class="card-description">Zvýšením investic dojde k podpoře tržní síle firem, které například nakupují nové stroje, i rychlému vytvoření pracovních míst. Na druhou stranu však může část kapitálu uniknout do zahraničí, jelikož ne vždy v zakázce zvítězí česká firma.</p>
+        <form method="post" action=".">
+          <div class="vote-wrapper">
+            <input type="hidden" name="number" value="1">
+                           <label class="select ignore-selection">
+            <div class="radio">
+                <input id="ano" type="radio" name="odpoved_1" value="0" required="">
+                <label for="ano">Ano</label>
+             </div>
+           </label>
+           <label class="select ignore-selection">
+             <div class="radio">
+                <input id="ne" type="radio" name="odpoved_1" value="1" required="">
+                <label for="ne">Ne</label>
+             </div>
+           </label>
+           <label class="select ignore-selection">
+             <div class="radio">
+                <input id="mozna" type="radio" name="odpoved_1" value="2" required="">
+                <label for="mozna">Možná</label>
+             </div>
+           </label>
+           </div>
+          <div class="button-wrapper">
+             <a href="#">
+                <div class="button blue" onclick="goBack()">← Předchozí otázka</div>
+             </a>
+             <button name="submit" type="submit" class="submit-button button tyrkysova">→ Další otázka</button>
+              </div>
+            </form>
+           </div>
+        </div>
+        <div class="footer">
+         By <a href="https://civilio.cz/" style="color: #2912DA">Civilio</a> and Ander in 2021
+        </div>
+     </div>
+  </div>
+</div>
+
+
+
+<script>
+function goBack() {
+window.history.back();
+}
+</script></body></html>

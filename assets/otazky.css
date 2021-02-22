@@ -1,0 +1,480 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #101d34;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #626262;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #C0C0C0;
+}
+
+.outer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  color: #ffffff;
+}
+.logo img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  padding-top: 25px;
+}
+.logo h1{
+  text-align: center;
+  font-size: 1.8em;
+}
+.card-quiz-outer {
+    width: 85vw;
+    margin: 2.5em auto 0 auto;
+}
+.card {
+  background-color: #035ECE;
+  border-radius: 20px;
+  clear: both;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+}/*
+@media only screen and (max-width: 500px) {
+.card { width: 350px; }
+}*/
+.card-content {
+  padding: 20px;
+  font-weight: 300;
+}
+.card-content h1, .modal-content h1 {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+}
+.card-content p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+
+.card-description {
+  display: block;
+  margin-top: 8px;
+  font-size: 110%;
+  color: #ffffffdd;
+  border-left: 3px solid #848484;
+  padding: 0 8px 0 8px;
+}
+
+.footer {
+  padding: 10px 16px;
+  text-align: center;
+  color: #848484;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+.button-wrapper {
+  margin: 1em 0;
+  display: inline-block;
+  float: right;
+}
+.button {
+  display: inline-block;
+  margin: 5px 10px;
+  width: 175px;
+  padding: 12px 12px;
+  transition: all 150ms linear;
+  text-align: center;
+  border-radius: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.75);
+}
+ .button:hover, .button-vysledky:hover {
+     transition: all 150ms linear;
+     opacity: 0.85;
+}
+ .button:active, .button-vysledky:active {
+     transition: all 150ms linear;
+     opacity: 0.75;
+}
+ .button:focus, .button-vysledky:focus {
+     outline: 1px dotted #959595;
+     outline-offset: -4px;
+}
+.blue {
+  color: #ffffff;
+  background: #416dea;
+}
+
+.tyrkysova {
+  color: #ffffff;
+  background: #71ADFF
+}
+
+.green {
+  color: #ffffff;
+  background: #339037;
+}
+.submit-button {
+  border: none!important;
+  cursor: pointer!important;
+  outline: inherit!important;
+}
+
+.radio {
+  margin: 1em;
+}
+
+/* Input toggle by Aaron Iker - Source: https://codepen.io/aaroniker/pen/ZEYoxEY */
+
+input[type='checkbox'], input[type='radio'] {
+  --active: #416dea;
+  --active-inner: #fff;
+  --focus: 2px rgba(39, 94, 254, .3);
+  --border: #e6e6e6;
+  --border-hover: #416dea;
+  --background: #e6e6e6;
+  --disabled: #000000;
+  --disabled-inner: #000000;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     height: 21px;
+     outline: none;
+     display: inline-block;
+     vertical-align: top;
+     position: relative;
+     margin: 0;
+     cursor: pointer;
+     border: 1px solid var(--bc, var(--border));
+     background: var(--b, var(--background));
+     transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+ input[type='checkbox']:after, input[type='radio']:after {
+     content: '';
+     display: block;
+     left: 0;
+     top: 0;
+     position: absolute;
+     transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+}
+ input[type='checkbox']:checked, input[type='radio']:checked {
+     --b: var(--active);
+     --bc: var(--active);
+     --d-o: 0.3s;
+     --d-t: 0.6s;
+     --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+ input[type='checkbox']:disabled, input[type='radio']:disabled {
+     --b: var(--disabled);
+     cursor: not-allowed;
+     opacity: 0.9;
+}
+ input[type='checkbox']:disabled:checked, input[type='radio']:disabled:checked {
+     --b: var(--disabled-inner);
+     --bc: var(--border);
+}
+ input[type='checkbox']:disabled + label, input[type='radio']:disabled + label {
+     cursor: not-allowed;
+}
+ input[type='checkbox']:hover:not(:checked):not(:disabled), input[type='radio']:hover:not(:checked):not(:disabled) {
+     --bc: var(--border-hover);
+}
+ input[type='checkbox']:focus, input[type='radio']:focus {
+     box-shadow: 0 0 0 var(--focus);
+}
+ input[type='checkbox']:not(.switch), input[type='radio']:not(.switch) {
+     width: 21px;
+}
+ input[type='checkbox']:not(.switch):after, input[type='radio']:not(.switch):after {
+     opacity: var(--o, 0);
+}
+ input[type='checkbox']:not(.switch):checked, input[type='radio']:not(.switch):checked {
+     --o: 1;
+}
+ input[type='checkbox'] + label, input[type='radio'] + label {
+     font-size: 14px;
+     line-height: 21px;
+     display: inline-block;
+     vertical-align: top;
+     cursor: pointer;
+     margin-left: 4px;
+}
+ input[type='checkbox']:not(.switch) {
+     border-radius: 7px;
+}
+ input[type='checkbox']:not(.switch):after {
+     width: 5px;
+     height: 9px;
+     border: 2px solid var(--active-inner);
+     border-top: 0;
+     border-left: 0;
+     left: 7px;
+     top: 4px;
+     transform: rotate(var(--r, 20deg));
+}
+ input[type='checkbox']:not(.switch):checked {
+     --r: 43deg;
+}
+ input[type='checkbox'].switch {
+     width: 38px;
+     border-radius: 11px;
+}
+ input[type='checkbox'].switch:after {
+     left: 2px;
+     top: 2px;
+     border-radius: 50%;
+     width: 15px;
+     height: 15px;
+     background: var(--ab, var(--border));
+     transform: translateX(var(--x, 0));
+}
+ input[type='checkbox'].switch:checked {
+     --ab: var(--active-inner);
+     --x: 17px;
+}
+ input[type='checkbox'].switch:disabled:not(:checked):after {
+     opacity: 0.6;
+}
+ input[type='radio'] {
+     border-radius: 50%;
+}
+ input[type='radio']:after {
+     width: 19px;
+     height: 19px;
+     border-radius: 50%;
+     background: var(--active-inner);
+     opacity: 0;
+     transform: scale(var(--s, 0.7));
+}
+ input[type='radio']:checked {
+     --s: 0.5;
+}
+.text-align-center {
+  text-align: center;
+}
+.logo-strana {
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 10px;
+}
+.logo-strana-vitezna {
+  width: 150px;
+  height: 150px;
+}
+.logo-strana-vedlejsi {
+  width: 75px;
+  height: 75px;
+}
+.logo-strana-wrapper-vitezna h1 {
+  font-size: 1.5em;
+}
+.logo-strana-wrapper-vitezna p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.logo-strana-wrapper-vedlejsi h1 {
+  font-size: 1.2em;
+}
+.logo-strana-wrapper-vedlejsi p {
+  font-size: 1em;
+  font-weight: bold;
+}
+.vedlejsi-wrapper {
+  white-space: nowrap;
+}
+.vedlejsi-half {
+  width: 50%;
+  display: inline-block;
+  white-space: normal;
+}
+
+.select {
+  display: block;
+  padding: 1px 1px;
+  border: 1px solid #ffffff;
+  border-radius: 360px;
+        
+  -webkit-transition: padding 250ms ease-in-out;
+  -ms-transition: padding 250ms ease-in-out;
+  transition: padding 250ms ease-in-out;
+}
+
+.ignore-selection {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.button-vysledky {
+  color: #ffffff;
+  background: #416dea;
+  display: flex;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 12px 12px;
+  cursor: pointer;
+  transition: all 150ms linear;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.75);
+}
+#modal-btn {
+  width: 200px;
+}
+#permanent-link {
+  width: 255px;
+}
+#permanent-link-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.column {
+  display: flex;
+    flex-wrap: wrap;
+}
+.row{
+  display: flex;
+align-items: center;
+justify-content: center;
+flex: 1 0 20rem;
+ }
+.modal {
+  display: none;
+  position: fixed;
+  overflow-y: initial !important;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  position: relative;
+  background-color: #172b4d;
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 20px;
+  margin: auto;
+  height: 80%;
+  overflow-y: auto;
+  width: 75%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.close-btn {
+  float: right;
+  color: lightgray;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: darkgray;
+}
+
+th, td {
+  padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-red {
+  color: #f44336;
+}
+.table-green {
+  color: #4caf50;
+}
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@media only screen and (max-width: 825px) {
+.vedlejsi-half { width: 100%; display: block; }
+.modal table {  font-size: 10px; }
+}
